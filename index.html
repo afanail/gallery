@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>lightGallery: thumbnails</title>
+    <meta name="description" content="lightGallery lets you to create animated thumbnails for your gallery with the help of thumbnail plugin." />
+    <!--<link rel="stylesheet" href="../styles/spinner.css">-->
+    <!--<link rel="stylesheet" href="../styles/modal.css">-->
+    <!--<link rel="stylesheet" href="../styles/gallery-rows.css">-->
+    <!--<link rel="stylesheet" href="../static/css/style.css" />-->
+    <link href="./static/css/main.css" rel="stylesheet">
+    <link href="./static/css/justifiedGallery.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="./lightgallery/css/lightgallery.css" rel="stylesheet">
+    <!--<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">-->
+    <!--<link rel="icon" href="../favicon.ico" type="image/x-icon">-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="demos">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<nav class="navbar navbar-default" role="navigation">
+        <a class="navbar-brand" href="https://www.y2t.com/conversation/" target="_blank">2018华南信息化交流会暨第二届吐槽会云相册现场</a>
+    <!-- <div class="container-fluid container-fluid1">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.y2t.com/conversation/" target="_blank">2018华南信息化交流会暨第二届吐槽会</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            2018华南信息化交流会暨第二届吐槽会
+            <ul class="nav navbar-nav">
+                <li><a href=https://www.y2t.com/conversation/" target="_blank">主页<span class="border"></span></a></li>
+                <li><a href="../docs/">Docs<span class="border"></span></a></li><li> <a href="../docs/license.html">License<span class="border"></span></a></li>
+                <li class="active"><a href="../demos/">Demos<span class="border"></span></a></li>
+                <li><a target="_blank" href="https://github.com/sachinchoolur/lightgallery.js">Github<span class="border"></span></a></li>
+                <li><a target="_blank" href="http://sachinchoolur.github.io/lightGallery/" onclick="ga('send', 'event', 'lg', 'lg');">jQuery lightGallery<span class="border"></span></a></li> 
+                
+            </ul>
+        </div>
+    </div> -->
+</nav>
+
+<section class="section highlight pdb0" >
+    <div class="container-fluid">
+            <p class="tip">时间：2019.01.15 13:00-18:30</p>
+            <p class="tip">地点：外运大楼19楼会议室</p>
+        <!-- <h2 class="anchor-title mrb35" id="normal-thumb">
+            <a href="#normal-thumb"><img src="../img/logoact.png" alt="" style=""></a>
+            <span class="border"></span>
+        </h2> -->
+        <div class="img-area">
+                
+                <form id="infoLogoForm" enctype='multipart/form-data'>
+                    <div class="cnt-updateWrapper" >
+                        <div>
+                            <div id="loadImg" class="cnt-img-content">
+                                <div class="fake-input-btn">现场图片上传</div>
+                                <input type="text" class="fake-input-text" readonly>
+                                <input type="file" id="ctn-input-file" name="file" accept="image/*" class="input-btn">
+                            </div>
+                            <div class="review">
+                                <img class="review-image"/>
+                            </div>
+                            <button class="fake-input-btn" id="uploadnow" style="display:none">上传</button>
+                        </div>
+                    </div>
+                </form>
+                <!-- <form id="infoLogoForm" enctype='multipart/form-data'>
+
+            <input id="file" name="file" type="file" class="inputfile" >
+            <button id="upload" class="upload">上传</button>
+            </form> -->
+        </div>
+        <div class="demo-gallery mrb50">  
+            <div id="thumbnials-without-animation" class="list-unstyled">
+              
+            </div>
+        </div>
+    </div>
+</section>
+<div class="mask">
+    <div class="mask-content">
+        <img class="mask-image"/>
+    </div>
+</div>
+ 
+<script src="./static/js/jquery.min.js"></script>
+<script src="./static/js/prettify.js"></script>
+<script src="./static/js/jquery.justifiedGallery.min.js"></script>
+<script src="./static/js/transition.js"></script>
+<script src="./static/js/collapse.js"></script>
+<script src="./lightgallery/js/lightgallery.js"></script>
+<script src="./lightgallery/js/lg-fullscreen.js"></script>
+<script src="./lightgallery/js/lg-thumbnail.js"></script>
+<script src="./lightgallery/js/lg-video.js"></script>
+<script src="./lightgallery/js/lg-autoplay.js"></script>
+<script src="./lightgallery/js/lg-zoom.js"></script>
+<script src="./external/jquery.mousewheel.min.js"></script>
+<!-- <script>
+    var $thumb = $('#thumbnials-without-animation');
+    if ($thumb.length) {
+            $thumb.justifiedGallery({
+                border: 6
+            }).on('jg.complete', function() {
+                $thumb.lightGallery({
+                    thumbnail: true,
+                    animateThumb: false,
+                    showThumbByDefault: false
+                });
+            });
+        };
+   
+</script> -->
+<script src="./static/js/demos.js"></script>
+
+
+</body>
+</html>

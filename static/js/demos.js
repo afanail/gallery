@@ -22,7 +22,7 @@ $(document).ready(function () {
                 var fragments = ` <a  class="" href="${data.data[i].url}">
                     <img class="img-responsive" src="${data.data[i].url}">
                     <div class="demo-gallery-poster">
-                        <img src="../static/img/zoom.png">
+                        <img src="./static/img/zoom.png">
                     </div></a>`
                 $thumb.prepend(fragments)
             }
@@ -62,7 +62,7 @@ $(document).ready(function () {
             var fragments = ` <a  class="" href="${data.data[i].url}">
             <img class="img-responsive" src="${data.data[i].url}">
             <div class="demo-gallery-poster">
-                <img src="../static/img/zoom.png">
+                <img src="./static/img/zoom.png">
             </div></a>`
             $thumb.append(fragments)
         }
@@ -190,20 +190,20 @@ $(document).ready(function () {
         $(this).lightGallery({
             dynamic: true,
             dynamicEl: [{
-                src: '../static/img/1.jpg',
-                thumb: '../static/img/thumb-1.jpg',
+                src: './static/img/1.jpg',
+                thumb: './static/img/thumb-1.jpg',
                 subHtml: '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
             }, {
-                src: '../static/img/2.jpg',
-                thumb: '../static/img/thumb-2.jpg',
+                src: './static/img/2.jpg',
+                thumb: './static/img/thumb-2.jpg',
                 subHtml: '<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I\'m extremely happy I was passing the right place at the right time....</p>'
             }, {
-                src: '../static/img/13.jpg',
-                thumb: '../static/img/thumb-13.jpg',
+                src: './static/img/13.jpg',
+                thumb: './static/img/thumb-13.jpg',
                 subHtml: '<h4>Sunset Serenity</h4><p>A gorgeous Sunset tonight captured at Coniston Water....</p>'
             }, {
-                src: '../static/img/3.jpg',
-                thumb: '../static/img/thumb-3.jpg',
+                src: './static/img/3.jpg',
+                thumb: './static/img/thumb-3.jpg',
                 subHtml: '<h4>Coniston Calmness</h4><p>Beautiful morning</p>'
             }]
         })
@@ -254,11 +254,11 @@ $(document).ready(function () {
 
     // methods
     var $methods = $('#methods');
-    var slide = '<li class="col-xs-6 col-sm-4 col-md-3" data-src="../static/img/4.jpg">' +
+    var slide = '<li class="col-xs-6 col-sm-4 col-md-3" data-src="./static/img/4.jpg">' +
         '<a href="">' +
-        '<img class="img-responsive" src="../static/img/thumb-4.jpg">' +
+        '<img class="img-responsive" src="./static/img/thumb-4.jpg">' +
         '<div class="demo-gallery-poster">' +
-        '<img src="../static/img/zoom.png">' +
+        '<img src="./static/img/zoom.png">' +
         '</div>' +
         '</a>' +
         '</li>';
